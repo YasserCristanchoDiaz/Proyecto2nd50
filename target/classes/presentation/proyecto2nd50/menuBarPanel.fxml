@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.proyecto2nd50.ControllerMenuBar">
+   <children>
+      <MenuBar fx:id="menuBar">
+         <menus>
+            <Menu mnemonicParsing="false" text="Pedidos">
+               <items>
+                  <MenuItem fx:id="mItemPedido" mnemonicParsing="false" onAction="#onPedido" text="Agregar Pedido" />
+                  <MenuItem fx:id="mItemListFecha" mnemonicParsing="false" onAction="#onListFecha" text="Lista por fecha" />
+                  <MenuItem fx:id="mItemCerrarTienda" mnemonicParsing="false" onAction="#onCerrarTienda" text="Cerrar tienda" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Domiciliarios">
+               <items>
+                  <MenuItem fx:id="mItemGesDom" mnemonicParsing="false" onAction="#onGesDom" text="Gestionar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Productos">
+               <items>
+                  <MenuItem fx:id="mItemGesProd" mnemonicParsing="false" onAction="#onGesProd" text="Gestionar" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane fx:id="loginAnchorPane" layoutX="248.0" layoutY="56.0" prefHeight="369.0" prefWidth="317.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" text="&gt;&gt;&gt;SpeedFood!" textFill="#21d727">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="76.0" text="¡Bienvenido!" textFill="#e55809">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="88.0" layoutY="126.0" text="Usuario" />
+            <TextField fx:id="userTxt" layoutX="87.0" layoutY="143.0" />
+            <Label layoutX="88.0" layoutY="195.0" text="Contraseña" />
+            <PasswordField fx:id="pwTxt" layoutX="87.0" layoutY="212.0" />
+            <Label fx:id="pwAlertLbl" layoutX="84.0" layoutY="237.0" textFill="#ee1207" />
+            <Button fx:id="loginBtn" layoutX="133.0" layoutY="282.0" mnemonicParsing="false" onAction="#onLogin" text="Login" />
+            <Label fx:id="usAlertLbl" layoutX="88.0" layoutY="168.0" textFill="#f80707">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
