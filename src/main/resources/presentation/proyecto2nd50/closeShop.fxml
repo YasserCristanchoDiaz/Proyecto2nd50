@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.proyecto2nd50.ControllerCloseShop">
+   <children>
+      <TableView fx:id="domiciliersTable" layoutX="14.0" layoutY="46.0" prefHeight="191.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="102.0" text="Nombre" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="107.0" text="Apellido" />
+            <TableColumn fx:id="idColumn" prefWidth="90.0" text="ID" />
+            <TableColumn fx:id="nPhoneColumn" prefWidth="113.0" text="Celular" />
+            <TableColumn fx:id="nOrdersColumn" prefWidth="73.0" text="N° Pedidos" />
+            <TableColumn fx:id="bonoColumn" prefWidth="40.0" text="Bono" />
+            <TableColumn fx:id="salaryColumn" prefWidth="94.0" text="Salario" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" text="Domiciliarios">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="643.0" layoutY="6.0" text="Fecha" />
+      <TextField fx:id="todayTxt" layoutX="643.0" layoutY="21.0" />
+      <Label layoutX="645.0" layoutY="53.0" text="Producto más vendido" />
+      <TextField fx:id="prMasVenTxt" layoutX="643.0" layoutY="70.0" />
+      <Label layoutX="645.0" layoutY="104.0" text="Cliente preferencial" />
+      <TextField fx:id="clientPrTxt" layoutX="643.0" layoutY="121.0" />
+      <Label layoutX="645.0" layoutY="153.0" text="N° Ordenes" />
+      <TextField fx:id="nOrdersTodayTxt" layoutX="643.0" layoutY="170.0" />
+      <Label layoutX="645.0" layoutY="204.0" text="Ganacia total" />
+      <TextField fx:id="ganTotalTxt" layoutX="643.0" layoutY="221.0" />
+   </children>
+</AnchorPane>

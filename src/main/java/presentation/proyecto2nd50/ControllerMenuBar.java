@@ -16,8 +16,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ControllerMenuBar implements Initializable {
+//CONTROLADOR_PRINCIPAL---
 
     private ManagementAdmin mngAdmin;
+    private ContrellerGestionDom contrellerGestionDom;
+    private ControllerGestionProduct controllerGestionProduct;
+    private ControllerCloseShop controllerCloseShop;
 
     public ControllerMenuBar() {}
 
@@ -92,17 +96,53 @@ public class ControllerMenuBar implements Initializable {
 
     @FXML
     void onCerrarTienda(ActionEvent event) {
+        try {
+            loadCloseShop();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void loadCloseShop() throws IOException {
+        Stage stageCloseShop = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        AnchorPane anchorPane = fxmlLoader.load(getClass().getResource("closeShop.fxml").openStream());
+        this.controllerCloseShop = fxmlLoader.getController();
+        Scene sceneCloseShop = new Scene(anchorPane);
+        stageCloseShop.setScene(sceneCloseShop);
+        stageCloseShop.alwaysOnTopProperty();
+        stageCloseShop.initModality(Modality.APPLICATION_MODAL);
+        stageCloseShop.showAndWait();
     }
 
     @FXML
     void onGesDom(ActionEvent event) {
+        try {
+            loadGesDom();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void loadGesDom() throws IOException {
+        Stage stageTableDom = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        AnchorPane anchorPane = fxmlLoader.load(getClass().getResource("gestionDomicilier.fxml").openStream());
+        this.contrellerGestionDom = fxmlLoader.getController();
+        Scene sceneTableDom = new Scene(anchorPane);
+        stageTableDom.setScene(sceneTableDom);
+        stageTableDom.alwaysOnTopProperty();
+        stageTableDom.initModality(Modality.APPLICATION_MODAL);
+        stageTableDom.showAndWait();
     }
 
     @FXML
     void onGesProd(ActionEvent event) {
-
+        try {
+            loadGesProduct();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -113,5 +153,17 @@ public class ControllerMenuBar implements Initializable {
     @FXML
     void onPedido(ActionEvent event) {
 
+    }
+
+    private void loadGesProduct() throws IOException {
+        Stage stageGesProduct = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        AnchorPane anchorPane = fxmlLoader.load(getClass().getResource("gestionProduct.fxml").openStream());
+        this.controllerGestionProduct = fxmlLoader.getController();
+        Scene sceneGesProduct = new Scene(anchorPane);
+        stageGesProduct.setScene(sceneGesProduct);
+        stageGesProduct.alwaysOnTopProperty();
+        stageGesProduct.initModality(Modality.APPLICATION_MODAL);
+        stageGesProduct.showAndWait();
     }
 }

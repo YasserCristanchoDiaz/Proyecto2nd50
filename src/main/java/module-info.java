@@ -1,6 +1,7 @@
 module presentation.proyecto2nd50 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.base;
     requires com.google.gson;
 
 
@@ -9,4 +10,7 @@ module presentation.proyecto2nd50 {
 
     opens logic.admin to com.google.gson;
     exports logic.admin;
+
+    opens logic.model to javafx.base;
+    exports logic.model;
 }

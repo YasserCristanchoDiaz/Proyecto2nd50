@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.proyecto2nd50.ControllerGestionProduct">
+   <children>
+      <Label layoutX="47.0" layoutY="29.0" text="Buscar por N° referncia: " />
+      <TextField fx:id="searchRefTxt" layoutX="176.0" layoutY="25.0" />
+      <Button fx:id="searchRefBtn" layoutX="325.0" layoutY="25.0" mnemonicParsing="false" onAction="#onSearchRef" text="Buscar" />
+      <Button fx:id="addProductBtn" layoutX="484.0" layoutY="25.0" mnemonicParsing="false" onAction="#onAddProduct" text="Agregar" />
+      <Label layoutX="41.0" layoutY="81.0" text="Descripcion: " />
+      <TextField fx:id="descrptionTxt" layoutX="109.0" layoutY="77.0" />
+      <Label layoutX="272.0" layoutY="81.0" text="Precio: $" />
+      <TextField fx:id="valueTxt" layoutX="318.0" layoutY="77.0" />
+      <Button fx:id="editProductBtn" layoutX="484.0" layoutY="77.0" mnemonicParsing="false" onAction="#onEditProduct" prefHeight="25.0" prefWidth="59.0" text="Editar" />
+      <Label fx:id="searchRefAdvertLbl" layoutX="176.0" layoutY="50.0" textFill="#eb0707">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="desAdvertLbl" layoutX="111.0" layoutY="102.0" textFill="#eb0707">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="valueAdvertLbl" layoutX="318.0" layoutY="102.0" textFill="#eb0707">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableProducts" layoutX="21.0" layoutY="130.0" prefHeight="243.0" prefWidth="542.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+        <columns>
+          <TableColumn fx:id="refColumn" prefWidth="102.0" text="Referencia" />
+          <TableColumn fx:id="descColumn" prefWidth="328.0" text="Descripcion" />
+            <TableColumn fx:id="valueColumn" prefWidth="137.0" text="Precio" />
+        </columns>
+      </TableView>
+      <Button fx:id="newBtn" layoutX="402.0" layoutY="25.0" mnemonicParsing="false" onAction="#onNew" text="Nuevo" />
+   </children>
+</AnchorPane>
